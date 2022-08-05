@@ -55,13 +55,12 @@ Description=BSC Mainnet go client
 After=syslog.target network.target
 
 [Service]
-User=geth56
-Group=geth56
-Environment=HOME=/work/blockchain-node/bsc/mainnet/
+User=root
+Group=root
 Type=simple
 ExecStart=geth56 --config /work/blockchain-node/bsc/mainnet/config.toml --datadir /work/blockchain-node/bsc/mainnet/node  --cache 18000 --rpc.allow-unprotected-txs --txlookuplimit 0 --ws --http
 KillMode=process
-KillSignal=SIGINT
+KillSignal=SIGTERM
 TimeoutStopSec=90
 Restart=on-failure
 RestartSec=10s
