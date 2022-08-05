@@ -78,13 +78,12 @@ Description=BSC Testnet go client
 After=syslog.target network.target
 
 [Service]
-User=geth97
-Group=geth97
-Environment=HOME=/work/blockchain-node/bsc/testnet/
+User=root
+Group=root
 Type=simple
 ExecStart=geth97 --config /work/blockchain-node/bsc/testnet/config.toml --datadir /work/blockchain-node/bsc/testnet/node  --cache 18000 --rpc.allow-unprotected-txs --txlookuplimit 0 --ws --http
 KillMode=process
-KillSignal=SIGINT
+KillSignal=SIGTERM
 TimeoutStopSec=90
 Restart=on-failure
 RestartSec=10s
