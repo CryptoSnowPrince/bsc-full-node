@@ -59,7 +59,6 @@ User=geth56
 Group=geth56
 Environment=HOME=/work/blockchain-node/bsc/mainnet/
 Type=simple
-ExecStartPre=geth56 --datadir node init /work/blockchain-node/bsc/mainnet/genesis.json
 ExecStart=geth56 --config /work/blockchain-node/bsc/mainnet/config.toml --datadir /work/blockchain-node/bsc/mainnet/node  --cache 18000 --rpc.allow-unprotected-txs --txlookuplimit 0 --ws --http
 KillMode=process
 KillSignal=SIGINT
@@ -83,7 +82,6 @@ User=geth97
 Group=geth97
 Environment=HOME=/work/blockchain-node/bsc/testnet/
 Type=simple
-ExecStartPre=geth97 --datadir node init /work/blockchain-node/bsc/testnet/genesis.json
 ExecStart=geth97 --config /work/blockchain-node/bsc/testnet/config.toml --datadir /work/blockchain-node/bsc/testnet/node  --cache 18000 --rpc.allow-unprotected-txs --txlookuplimit 0 --ws --http
 KillMode=process
 KillSignal=SIGINT
