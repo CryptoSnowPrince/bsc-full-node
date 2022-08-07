@@ -1,7 +1,5 @@
 /mainnet/node
 /testnet/node
 geth
-*.com
 mainnet/geth56.service
 testnet/geth97.service
-crontab
